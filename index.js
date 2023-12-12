@@ -52,4 +52,4 @@ app.post('/setimage', upload.single('file'), isAuthenticated, setImage);
 
 app.use(error)
 
-app.listen(3000, () => console.log("connected"));
+app.listen(SECRET.PORT, () => console.log(`Listening on ${SECRET.PORT}`));
