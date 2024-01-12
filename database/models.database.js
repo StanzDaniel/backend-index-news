@@ -1,28 +1,22 @@
 import { Schema, model } from "mongoose";
 
 const newsSchema = new Schema({
-  source: {
-    id: String,
-    name: String
-  },
-  author: String,
   title: String,
-  description: String,
-  url: String,
-  urlToImage: String,
-  publishedAt: String,
-  content: String
-});
-
-const imageSchema = new Schema({
-  fieldname: String,
-  originalname: String,
-  encoding: String,
-  mimetype: String,
-  destination: String,
-  filename: String,
-  path: String,
-  size: Number,
+  author: String,
+  published_date: String,
+  published_date_precision: String,
+  link: String,
+  clean_url: String,
+  excerpt: String,
+  summary: String,
+  rights: String,
+  rank: Number,
+  topic: String,
+  country: String,
+  language: String,
+  authors: String,
+  media: String,
+  _id: String,
 });
 
 export const User = model("User", {
