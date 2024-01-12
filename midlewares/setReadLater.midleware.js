@@ -6,7 +6,7 @@ export const setReadLater = async (req, res) => {
   try {
     const user = await User.findOne({email: body.user.email});
 
-    const readLaterRemoved = user.readLater.filter((item) => item.content !== body.news.content);
+    const readLaterRemoved = user.readLater.filter((item) => item.title !== body.news.title);
 
     if (readLaterRemoved.length === user.readLater.length) {
       user.readLater.unshift(body.news);
